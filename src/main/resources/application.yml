@@ -1,0 +1,20 @@
+server:
+  port: 8888
+spring:
+  application:
+    name: CONFIG-SERVER
+
+  security:
+    user:
+      name: root
+      password: s3cr3t
+
+  cloud:
+    config:
+      server:
+        git:
+          uri: file://Users/burakbalim/codes/native/config-repo
+          default-label: master
+          clone-on-start: true
+      discovery:
+        enabled: true
